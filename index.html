@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Từ vựng trọng tâm – Ôn thi GK1 Tiếng Anh</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#f6f7fa;--ink:#1c2333;--mute:#5d667a;--line:#d9dde6;--pen:#d4206c;--blue:#2a4a9a;--card:#fff;--ok:#1d8a4e;--bad:#c62828}
+@media (prefers-color-scheme:dark){:root{--bg:#141824;--ink:#e8ebf3;--mute:#98a2b8;--line:#2c3448;--pen:#ff5c9a;--blue:#8fb0ff;--card:#1c2233;--ok:#5fd18d;--bad:#ff7b7b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Be Vietnam Pro",system-ui,sans-serif}
+header{padding:2.5rem 1.2rem 1rem;max-width:1000px;margin:auto}
+h1{font-size:clamp(1.7rem,5vw,2.8rem);line-height:1.15;margin:0 0 .5rem;font-weight:800}
+h1 span{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--pen) 45%,transparent) 62%)}
+header p{color:var(--mute);margin:.3rem 0;max-width:62ch}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav div{max-width:1000px;margin:auto;display:flex;gap:.3rem;overflow-x:auto;padding:.5rem 1.2rem}
+nav button{font:inherit;font-weight:500;border:0;background:none;color:var(--mute);padding:.5rem .9rem;border-radius:4px 14px 4px 14px;cursor:pointer;white-space:nowrap}
+nav button[aria-selected=true]{background:var(--blue);color:#fff}
+nav button:focus-visible,input:focus-visible,.btn:focus-visible{outline:3px solid var(--pen);outline-offset:2px}
+main{max-width:1000px;margin:auto;padding:1.2rem}
+section{display:none}section.on{display:block}
+h2{font-size:1.25rem;margin:1.8rem 0 .6rem;border-left:5px solid var(--pen);padding-left:.6rem}
+.src{color:var(--mute);font-size:.88rem;margin:-.3rem 0 .6rem}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{text-align:left;padding:.55rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.85rem;color:var(--mute);font-weight:700}
+tr:last-child td{border:0}
+td:first-child{font-weight:700;color:var(--blue);white-space:nowrap}
+.pos{font-style:italic;color:var(--mute);font-weight:400;font-size:.85rem}
+em{color:var(--mute)}
+#q{width:100%;padding:.7rem 1rem;font:inherit;border:2px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.qs{counter-reset:n;display:grid;gap:.8rem}
+.qi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem}
+.qi p{margin:0 0 .4rem;font-weight:500}
+.qi p::before{counter-increment:n;content:"Câu " counter(n) ". ";color:var(--pen);font-weight:800}
+.qi label{display:block;padding:.2rem .4rem;border-radius:6px;cursor:pointer}
+.qi.ok{border-color:var(--ok)}.qi.no{border-color:var(--bad)}
+label.right{background:color-mix(in srgb,var(--ok) 20%,transparent)}
+label.wrong{background:color-mix(in srgb,var(--bad) 20%,transparent)}
+.bar{display:flex;gap:.6rem;align-items:center;margin:1rem 0;flex-wrap:wrap}
+.btn{font:inherit;font-weight:700;border:2px solid var(--pen);background:var(--pen);color:#fff;padding:.6rem 1.3rem;border-radius:4px 16px 4px 16px;cursor:pointer}
+.btn.alt{background:none;color:var(--pen)}
+#score{font-weight:800;font-size:1.2rem}
+footer{max-width:1000px;margin:2rem auto;padding:0 1.2rem;color:var(--mute);font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+<h1>Từ vựng trọng tâm <span>ôn thi giữa kỳ 1</span></h1>
+<p>Tổng hợp từ các bài đọc trong đề ôn thi (Lớp 10, Trường THCS-THPT Nguyễn Bình Khiêm): môi trường &amp; tiêu dùng, việc nhà &amp; gia đình, tính cách &amp; thứ tự sinh, âm nhạc &amp; sự kiện trường.</p>
+</header>
+<nav><div role="tablist" id="tabs"></div></nav>
+<main>
+<section id="s0">
+<input id="q" type="search" placeholder="Tìm từ hoặc nghĩa… (vd: stereotype, bù đắp)" aria-label="Tìm từ vựng">
+<div id="topics"></div>
+</section>
+<section id="s1"><h2>Động từ &amp; cụm động từ thường gặp</h2><p class="src">Hay xuất hiện ở phần điền từ (Q1–12, 18–22) và đọc hiểu.</p><div class="wrap"><table id="vt"></table></div></section>
+<section id="s2"><h2>Liên từ &amp; từ nối cần nhớ</h2><p class="src">Phân biệt liên từ trong câu (but, so, or…) và từ nối đứng đầu câu (However, Moreover…).</p><div class="wrap"><table id="ct"></table></div></section>
+<section id="s3"><h2>50 câu luyện tập</h2><p class="src">Câu 1–25: động từ &amp; cụm động từ · 26–39: liên từ · 40–50: từ vựng chủ đề.</p>
+<div class="qs" id="qs"></div>
+<div class="bar"><button class="btn" id="chk">Nộp bài &amp; chấm điểm</button><button class="btn alt" id="rst">Làm lại</button><span id="score" aria-live="polite"></span></div></section>
+</main>
+<footer>Nội dung tự tổng hợp từ các bài đọc trong đề; nghĩa tiếng Việt mang tính tham khảo.</footer>
+<script>
+const T={
+"Môi trường & tiêu dùng":`sustainable|adj|bền vững|sustainable fashion made from recycled materials
+natural resources|n|tài nguyên thiên nhiên|protect natural resources
+awareness|n|nhận thức|raise awareness of plastic waste
+eliminate|v|loại bỏ|eliminate single-use plastic
+minimize|v|giảm thiểu|minimize its negative impact on the planet
+fleeting trends|n|xu hướng thoáng qua|avoid shopping based on fleeting trends
+greenhouse effect|n|hiệu ứng nhà kính|emissions contribute to the greenhouse effect
+emission|n|khí thải|carbon emissions
+carbon footprint|n|dấu chân carbon|small choices affect their carbon footprint
+refillable|adj|có thể nạp lại|refillable water bottles
+single-use|adj|dùng một lần|fewer single-use cups
+litter|n|rác vứt bừa|pick up litter after lunch
+consumer|n|người tiêu dùng|consumers can develop responsible habits
+environmentally friendly|adj|thân thiện môi trường|environmentally friendly materials`,
+"Việc nhà & gia đình":`chore|n|việc nhà vặt|tidy rooms or wash dishes
+household|adj/n|thuộc gia đình|household chores
+contribution|n|sự đóng góp|a sense of contribution
+belonging|n|cảm giác thuộc về|connects practical work with belonging
+predictable|adj|đều đặn, dự đoán được|responsibilities are predictable and shared
+be associated with|phr|gắn liền với|the chore may be associated with punishment
+manageable|adj|có thể xử lý được|a small, manageable consequence
+take over|phr v|làm thay, tiếp quản|adults may be tempted to take over
+rescue|n/v|cứu giúp (làm thay)|constant rescue removes the opportunity to improve
+competence|n|năng lực|help young people develop competence
+guidance|n|sự hướng dẫn|guidance is useful
+life skills|n|kỹ năng sống|help teenagers develop life skills
+appreciate|v|trân trọng|appreciate everyday contributions at home
+responsibility|n|trách nhiệm|take responsibility rather than leave it to adults`,
+"Tính cách & thứ tự sinh":`label|n|nhãn mác|a short label may hide important details
+stereotype|n|định kiến rập khuôn|labels can become stereotypes
+firstborn|n|con đầu lòng|everyone expects firstborns to be confident
+insecure|adj|thiếu tự tin|insecure = not confident about oneself
+anxious|adj|lo lắng|anxious = worried
+competitive|adj|hiếu thắng|competitive in sport but peaceful in friendships
+charming|adj|duyên dáng|charming in small groups
+sensitive|adj|nhạy cảm|sensitive and rather quiet
+extroverted|adj|hướng ngoại|extroverted and talkative
+cautious|adj|thận trọng|research gives us reasons to be cautious
+rebellious|adj|nổi loạn|a younger sibling may be called rebellious
+immature / mature|adj|chưa trưởng thành / trưởng thành|immature with friends, mature with a child
+unfriendly / sociable|adj|khó gần / hòa đồng|unfriendly on one difficult day
+evidence|n|bằng chứng|broader evidence rather than single stories
+factor|n|yếu tố|age and family background are other factors
+flexible|adj|linh hoạt|remain flexible rather than fixed judgments`,
+"Âm nhạc & sự kiện trường":`rehearse|v|diễn tập|each group rehearses for ten minutes
+perform|v|biểu diễn|an original performance idea
+participant|n|người tham gia|participants formed small teams
+contestant|n|thí sinh|contestants upload music files
+compensate (for)|v|bù đắp|a solo voice could not compensate for a weak band
+collaboration|n|sự cộng tác|a lesson in collaboration
+coordination|n|sự phối hợp|they value coordination with others
+publicity|n|quảng bá|microphones, lighting and publicity
+attract an audience|phr|thu hút khán giả|uploaded clips to attract an audience
+popularity|n|độ nổi tiếng|popularity is not proof of quality
+registration|n|sự đăng ký|before registration closes
+evaluate|v|đánh giá|the judges evaluated the final performances
+spread|v|lan truyền|why particular videos spread quickly
+panel|n|hội đồng|a panel of teachers and student representatives`};
+const V=`pick up|nhặt lên|pick up + N / pick N up|pick up litter after lunch
+put out|dập tắt|put out + N|put out a fire
+carry on|tiếp tục|carry on + V-ing|carry on working
+come up with|nảy ra, nghĩ ra|come up with + idea/plan|come up with an original idea
+clean up|dọn dẹp|clean up + N|clean up the sports field
+throw away|vứt đi|throw away + N|throw away used paper
+take over|tiếp quản, làm thay|take over (from sb)|adults take over because it is faster
+take place|diễn ra|không dùng bị động|the event takes place on 18 October
+make up for / compensate for|bù đắp|+ N|a solo voice could not compensate for the band
+cut down on|cắt giảm|cut down on + N|cut down on electricity use
+break down|hỏng, phân hủy|nội động từ|the machine broke down
+identify with|đồng cảm với|identify with + N|students identify with the character
+raise awareness of|nâng cao nhận thức|raise (ngoại ĐT) ≠ rise (nội ĐT)|raise awareness of plastic waste
+promote|thúc đẩy, quảng bá|promote + N|promote a greener culture
+eliminate|loại bỏ|eliminate + N|eliminate single-use plastic
+delay|trì hoãn|delay + N/V-ing|delay the show
+strengthen|củng cố|strengthen + N|strengthen family bonds
+develop|phát triển|develop + N|develop life skills
+take responsibility (for)|chịu trách nhiệm|take + responsibility|take responsibility for chores
+rehearse|diễn tập|let sb rehearse (V nguyên mẫu)|let each group rehearse
+perform|biểu diễn|perform + N|perform a song
+upload|tải lên|be expected to upload|expected to upload files
+install|lắp đặt|will be installed (bị động)|bins will be installed near the canteen
+separate A from B|tách A khỏi B|make sb separate (V nguyên mẫu)|separate plastic from paper
+organise|tổ chức|organise + N|organise a campaign
+evaluate|đánh giá|evaluate + N|judges evaluate performances
+contribute to|đóng góp vào|contribute to + N|age contributes to personality
+depend on|phụ thuộc vào|depend on + N|value depends on how adults introduce tasks
+require|đòi hỏi|require + N / V-ing|learning requires space
+reveal|tiết lộ, cho thấy|reveal + N|rehearsals revealed a different reality`;
+const C=`and|và|nối ý cùng hướng|help with posters and join a team
+but|nhưng|tương phản (trong câu)|quiet at school but talkative at home
+yet|tuy nhiên, nhưng|tương phản, trang trọng hơn but|Yet household chores can serve another purpose
+or|hoặc|lựa chọn|you may work alone or invite a family member
+so|vì vậy|chỉ kết quả (không dùng cùng because)|the plan is agreed, so we meet at 7 a.m.
+because|bởi vì|chỉ nguyên nhân + mệnh đề|because doing so is faster
+although / though|mặc dù|Although + S + V (không dùng but)|Although it rained, we finished
+while / whereas|trong khi|đối lập hai vế|one group got thousands of views, while another got few
+however|tuy nhiên|đầu câu: However, S + V|However, constant rescue can remove the chance to improve
+therefore|do đó|chỉ kết quả|Students therefore had to listen carefully
+as a result|kết quả là|đầu câu + dấu phẩy|As a result, young performers learn from criticism
+moreover / furthermore / also|hơn nữa|bổ sung ý|Furthermore, producing clothes releases emissions
+in addition|ngoài ra|bổ sung ý|In addition, judges give comments
+for example|ví dụ|đưa ví dụ|For example, cooking requires planning
+by contrast|ngược lại|đối lập, đầu câu|By contrast, shared responsibilities build belonging
+instead (of)|thay vì|Instead, S + V / instead of + N|Instead, consumers can buy recycled clothes
+rather than|hơn là|+ N / V-ing|treat it as an influence rather than a fixed rule
+still|tuy vậy|nhượng bộ, đầu câu|Still, a useful conclusion is to treat birth order as one influence
+first / next / then / finally|đầu tiên / tiếp / sau đó / cuối|trình tự sắp xếp câu|First, place bins… Finally, record the amount
+in my opinion|theo tôi|nêu quan điểm (mở đoạn)|In my opinion, a fair plan reduces arguments`;
+function tbl(el,head,data){el.innerHTML='<thead><tr>'+head.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+data.trim().split('\n').map(r=>'<tr>'+r.split('|').map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</tbody>'}
+tbl(document.getElementById('vt'),['Động từ / cụm','Nghĩa','Cấu trúc – lưu ý','Ví dụ từ đề'],V);
+tbl(document.getElementById('ct'),['Từ nối','Nghĩa','Cách dùng','Ví dụ'],C);
+// vocab by topic
+const tp=document.getElementById('topics');
+Object.entries(T).forEach(([k,v])=>{const d=document.createElement('div');d.className='tp';d.innerHTML='<h2>'+k+'</h2><div class="wrap"><table><thead><tr><th>Từ</th><th>Nghĩa</th><th>Ví dụ từ đề</th></tr></thead><tbody>'+v.split('\n').map(r=>{const[w,p,m,e]=r.split('|');return `<tr><td>${w} <span class="pos">${p}</span></td><td>${m}</td><td><em>${e}</em></td></tr>`}).join('')+'</tbody></table></div>';tp.appendChild(d)});
+document.getElementById('q').addEventListener('input',e=>{const s=e.target.value.toLowerCase();document.querySelectorAll('#topics tbody tr').forEach(r=>r.hidden=s&&!r.textContent.toLowerCase().includes(s));document.querySelectorAll('.tp').forEach(t=>t.hidden=![...t.querySelectorAll('tbody tr')].some(r=>!r.hidden))});
+// quiz
+const Q=[
+["Our members usually ___ up litter after lunch.",["pick","are picking","picked","have picked"],0],
+["The firefighters quickly ___ out the fire.",["carried on","put out","picked up","came up"],1],
+["Each group must ___ with an original performance idea.",["come up","carry on","throw away","clean up"],0],
+["Please ___ away used paper in the correct bin.",["throw","put","give","take"],0],
+["Despite the rain, the volunteers decided to ___ on working.",["carry","put","break","pick"],0],
+["A strong solo voice could not ___ for a band that entered at the wrong moment.",["compensate","compete","collect","contribute"],0],
+["Adults may be tempted to ___ over because doing so is faster.",["take","make","put","bring"],0],
+["The Young Talent Festival will ___ place on 18 October.",["make","take","have","do"],1],
+["Posters help ___ awareness of plastic waste.",["rise","raise","grow","lift"],1],
+["Household chores help teenagers ___ life skills.",["develop","delay","eliminate","upload"],0],
+["The project encourages teenagers to ___ responsibility.",["make","do","bring","take"],3],
+["We hope the activities will ___ family bonds.",["eliminate","delay","strengthen","upload"],2],
+["Contestants are expected ___ their music files two days in advance.",["upload","to upload","uploading","uploaded"],1],
+["A professional sound system ___ on the school stage next week.",["installs","is installing","will be installed","will install"],2],
+["The winning performance ___ by a panel of teachers and students.",["chooses","will choose","will be chosen","is choosing"],2],
+["The organisers will let each group ___ for ten minutes.",["rehearse","to rehearse","rehearsing","rehearsed"],0],
+["More than fifty young trees ___ by volunteers this weekend.",["plant","will plant","will be planted","are planting"],2],
+["Team leaders will make participants ___ plastic from paper.",["separate","to separate","separating","separated"],0],
+["The campaign aims to ___ single-use plastic completely.",["delay","eliminate","rehearse","upload"],1],
+["Because of the storm, the school had to ___ the final show.",["delay","eliminate","strengthen","perform"],0],
+["Our band will ___ two songs at the festival.",["promote","delay","eliminate","perform"],3],
+["Teachers asked students to ___ why some videos spread quickly.",["install","rehearse","examine","throw"],2],
+["Constant rescue can ___ the opportunity to improve.",["remove","upload","perform","rehearse"],0],
+["The new bins ___ near the canteen before the activity begins.",["install","will be installed","installed","are installing"],1],
+["A short report on collected waste ___ on the school website.",["posts","will post","will be posted","is posting"],2],
+["You may help with posters, ___ you may join the team that checks classrooms.",["but","or","so","and"],1],
+["She is quiet at school, ___ very talkative at home.",["so","because","yet","or"],2],
+["We chose Saturday ___ most students are free then.",["because","but","so","or"],0],
+["It rained heavily, ___ the event was moved indoors.",["but","so","because","or"],1],
+["___ the task was difficult, the students finished it.",["Although","Because","So","Therefore"],0],
+["Some singers like solo work, ___ others prefer teamwork.",["because","whereas","so","therefore"],1],
+["The video had great music. ___, few people watched it.",["Therefore","However","Moreover","For example"],1],
+["___ of treating popularity as proof, teachers asked students to examine it.",["Instead","Because","Although","However"],0],
+["Chores teach skills. ___, they build a sense of belonging.",["However","Moreover","Therefore","Yet"],1],
+["Chores teach planning. ___, cooking requires estimating time.",["For example","However","Although","Instead"],0],
+["He studied hard. ___, he passed the exam.",["As a result","However","Whereas","Although"],0],
+["First, place bins in the classroom. ___, collect the paper.",["Next","Because","Although","But"],0],
+["Parents may offer guidance; ___, children also need space to try again.",["so","because","however","or"],2],
+["Chores can feel boring, ___ they are valuable.",["so","because","but","or"],2],
+["If someone is “insecure”, they are ___.",["unwilling to share","excited by competition","not confident about themselves","interested in new ideas"],2],
+["In “responsibilities are predictable and shared”, predictable is closest to ___.",["difficult to finish","financially rewarding","regular and expected","completely optional"],2],
+["Someone who is “anxious” feels ___.",["careless","worried","cheerful","patient"],1],
+["A fixed, oversimplified idea about a group of people is a ___.",["stereotype","contribution","publicity","emission"],0],
+["An “extroverted” person is ___.",["shy and quiet","outgoing and talkative","always anxious","unfriendly"],1],
+["The ability to do something well is ___.",["guidance","belonging","competence","registration"],2],
+["“Fleeting trends” are trends that ___.",["last for a very short time","never change","are very expensive","help the planet"],0],
+["Noticeable ___ in family cooperation.",["improve","improving","improvement","improved"],2],
+["Teaching students to work together is a lesson in ___.",["collaboration","litter","emission","stereotype"],0],
+["Posters can raise ___ of plastic waste.",["aware","awareness","awarely","unaware"],1]];
+const qs=document.getElementById('qs');
+Q.forEach((q,i)=>{const d=document.createElement('div');d.className='qi';d.innerHTML='<p>'+q[0]+'</p>'+q[1].map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${'ABCD'[j]}. ${o}</label>`).join('');qs.appendChild(d)});
+document.getElementById('chk').onclick=()=>{let s=0;Q.forEach((q,i)=>{const d=qs.children[i],c=d.querySelector('input:checked');d.querySelectorAll('label').forEach(l=>l.className='');d.querySelectorAll('label')[q[2]].classList.add('right');const ok=c&&+c.value===q[2];if(ok)s++;else if(c)c.parentElement.classList.add('wrong');d.className='qi '+(ok?'ok':'no')});document.getElementById('score').textContent=`Điểm: ${s}/50 (${(s/5).toFixed(1)}/10)`};
+document.getElementById('rst').onclick=()=>{qs.querySelectorAll('input').forEach(i=>i.checked=false);qs.querySelectorAll('.qi').forEach(d=>{d.className='qi';d.querySelectorAll('label').forEach(l=>l.className='')});document.getElementById('score').textContent='';scrollTo(0,0)};
+// tabs
+const names=['Từ vựng theo chủ đề','Động từ','Liên từ','Luyện tập (50 câu)'],tb=document.getElementById('tabs');
+function show(n){names.forEach((_,i)=>{document.getElementById('s'+i).classList.toggle('on',i===n);tb.children[i].setAttribute('aria-selected',i===n)});history.replaceState(null,'','#'+n)}
+names.forEach((n,i)=>{const b=document.createElement('button');b.role='tab';b.textContent=n;b.onclick=()=>show(i);tb.appendChild(b)});
+show(+location.hash.slice(1)||0);
+</script>
+</body>
+</html>
